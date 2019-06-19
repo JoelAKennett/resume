@@ -2,6 +2,10 @@ import React, { Fragment } from 'react';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import logo from './logo.svg';
 
+import Header from '../Header';
+
+// DARK RED #7E1F27 RED #B4202E BLACK #010400 GREY #30332E WHITE #FFFFFF
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -52,27 +56,26 @@ const ReactLogo = styled.img`
   pointer-events: none;
 `;
 
-function App() {
-  return (
-    <Fragment>
-      <GlobalStyle />
-      <StyledAppContainer>
-        <StyledHeader>
-          <ReactLogo src={logo} alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <StyledLink
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </StyledLink>
-        </StyledHeader>
-      </StyledAppContainer>
-    </Fragment>
-  );
-}
+const App = () => (
+  <Fragment>
+    <GlobalStyle />
+    <StyledAppContainer>
+      <Header />
+      <StyledHeader>
+        <ReactLogo src={logo} alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <StyledLink
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </StyledLink>
+      </StyledHeader>
+    </StyledAppContainer>
+  </Fragment>
+);
 
 export default App;
