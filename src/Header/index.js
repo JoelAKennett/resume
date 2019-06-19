@@ -37,7 +37,7 @@ const Position = styled.h2`
 
 const Header = () => (
   <HeaderContainer>
-    <Photo src={photo} alt="Headshot of Joel Kennett"/>
+    <Photo src={photo} alt="Headshot of Joel Kennett" />
     <TextContainer>
       <Name>Joel Kennett Resume</Name>
       <Position>Javascript Software Developer</Position>
