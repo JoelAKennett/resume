@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import photo from './placeholderImage.jpeg';
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   background-color: #7E1F27;
   display: flex;
   justify-content: space-around;
