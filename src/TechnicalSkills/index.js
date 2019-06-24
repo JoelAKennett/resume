@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
+import SkillDescription from './SkillDescription';
+
 const StyledHeading = styled.h3`
   color: #FFFFFF;
   background-color: #30332E;
@@ -43,17 +45,33 @@ const SkillButton = styled.button`
   }
 `;
 
-const TechnicalSkills = () => (
-  <Fragment>
-    <StyledHeading>Technology Stack:</StyledHeading>
-    <SkillList>
-      <li><SkillButton type="button">React</SkillButton></li>
-      <li><SkillButton type="button">Node.js</SkillButton></li>
-      <li><SkillButton type="button">Docker</SkillButton></li>
-      <li><SkillButton type="button">AWS</SkillButton></li>
-      <li><SkillButton type="button">MongoDB</SkillButton></li>
-    </SkillList>
-  </Fragment>
-);
+class TechnicalSkills extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { description: '', showDescription: false };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(description) {
+    this.setState({ description, showDescription: true });
+  }
+
+  render() {
+    const { description, showDescription } = this.state;
+    return (
+      <Fragment>
+        <StyledHeading>Technology Stack:</StyledHeading>
+        <SkillList>
+          <li><SkillButton type="button" onClick={() => this.handleClick('REACT')}>React</SkillButton></li>
+          <li><SkillButton type="button" onClick={() => this.handleClick('NODE.JS')}>Node.js</SkillButton></li>
+          <li><SkillButton type="button" onClick={() => this.handleClick('DOCKER')}>Docker</SkillButton></li>
+          <li><SkillButton type="button" onClick={() => this.handleClick('AWS')}>AWS</SkillButton></li>
+          <li><SkillButton type="button" onClick={() => this.handleClick('MONGODB')}>MongoDB</SkillButton></li>
+        </SkillList>
+        { showDescription && <SkillDescription description={description} /> }
+      </Fragment>
+    );
+  }
+}
 
 export default TechnicalSkills;
