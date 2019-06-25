@@ -62,11 +62,11 @@ class TechnicalSkills extends React.Component {
       <Fragment>
         <StyledHeading>Technology Stack:</StyledHeading>
         <SkillList>
-          <li><SkillButton type="button" onClick={() => this.handleClick('REACT')}>React</SkillButton></li>
-          <li><SkillButton type="button" onClick={() => this.handleClick('NODE.JS')}>Node.js</SkillButton></li>
-          <li><SkillButton type="button" onClick={() => this.handleClick('DOCKER')}>Docker</SkillButton></li>
-          <li><SkillButton type="button" onClick={() => this.handleClick('AWS')}>AWS</SkillButton></li>
-          <li><SkillButton type="button" onClick={() => this.handleClick('MONGODB')}>MongoDB</SkillButton></li>
+          <li><SkillButton type="button" onClick={() => this.handleClick('react')}>React</SkillButton></li>
+          <li><SkillButton type="button" onClick={() => this.handleClick('node')}>Node.js</SkillButton></li>
+          <li><SkillButton type="button" onClick={() => this.handleClick('docker')}>Docker</SkillButton></li>
+          <li><SkillButton type="button" onClick={() => this.handleClick('aws')}>AWS</SkillButton></li>
+          <li><SkillButton type="button" onClick={() => this.handleClick('mongodb')}>MongoDB</SkillButton></li>
         </SkillList>
         { showDescription && <SkillDescription description={description} /> }
       </Fragment>
