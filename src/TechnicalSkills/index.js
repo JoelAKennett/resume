@@ -49,7 +49,6 @@ class TechnicalSkills extends React.Component {
   constructor(props) {
     super(props);
     this.state = { description: '', showDescription: false };
-    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(description) {
